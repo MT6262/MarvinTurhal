@@ -1,0 +1,202 @@
+
+/**
+ * Global CSS Styles
+ *
+ * This file contains the global CSS styles for the application.
+ * It sets the color palette, typography, spacing, and sizing for the entire application.
+ * It also includes styles for buttons, forms, tables, and other common elements.
+ *
+ * @summary Global CSS Styles for the application
+ * @since 1.0.0
+ */
+:root {
+    /* Color Palette */
+    --color-primary: #3498db;      /* Bright Blue */
+    --color-secondary: #2ecc71;    /* Emerald Green */
+    --color-danger: #e74c3c;       /* Soft Red */
+    --color-background: #f4f7f6;   /* Light Grayish Cyan */
+    --color-text-dark: #2c3e50;    /* Dark Slate Blue */
+    --color-text-light: #34495e;   /* Slightly Lighter Slate Blue */
+    --color-border: #ecf0f1;       /* Very Light Gray */
+    --color-white: #ffffff;        /* Pure White */
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Spacing and Sizing */
+    --border-radius: 10px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Resets and Base Styles */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Button Styles - Consistent and Clear */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+/* Form Styles - Clean and Modern */
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Inputs for Dark Mode Compatibility */
+input,
+select,
+textarea {
+    background-color: var(--color-white) !important;
+    color: var(--color-text-dark) !important;
+}
+
+/* Table Styles - Clean and Readable */
+.table {
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    color: var(--color-text-dark);
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Responsive Typography */
+h1 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Action Buttons Group */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+/* Change cursor to pointer when hovering over the arrow in the Completed Tasks container */
+.todo-section h2.clickable {
+    cursor: pointer;
+}
+
+/* Ensures all buttons are underlined on hover */
+button:hover, .btn:hover {
+    text-decoration: underline;
+}
+
+/* Input Group Enhancements */
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Cursor */
+input[type="text"],
+textarea {
+    cursor: text;
+}
+
+/* Cursor */
+select {
+    cursor: pointer;
+}
+/* Global Style for Datepicker */
+input[type="date"] {
+    position: relative;
+    padding-right: 30px; /* Platz für das Symbol schaffen */
+}
+
+/* add (📅) */
+input[type="date"]::after {
+    content: "📅";
+    position: absolute;
+    right: 30px; /* Abstand zum rechten Rand */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover- and Focus-Effects */
+input[type="date"]:hover,
+input[type="date"]:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    outline: none;
+}
+
+
+
+
